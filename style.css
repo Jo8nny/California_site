@@ -1,0 +1,644 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  *,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :focus,:active {outline: none;}
+  a:focus,a:active {outline: none;}
+  nav,footer,header,aside {display: block;}
+  html,body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  input,button,textarea {font-family: inherit;}
+  input::-ms-clear {display: none;}
+  button {cursor: pointer;}
+  button::-moz-focus-inner {padding: 0;border: 0;}
+  a,a:visited {text-decoration: none;}
+  a:hover {text-decoration: none;}
+  ul li {list-style: none;}
+  img {vertical-align: top;}
+  h1,h2,h3,h4,h5,h6 {font-size: inherit;font-weight: 400;}
+
+/* .........................FONTS............................ */
+
+@font-face {
+	font-family: 'Comfortaa Regular';
+	src: url('../fontsComfortaa-Regular.eot');
+	src: local('☺'), url('../fontsComfortaa-Regular.woff') format('woff'), url('../fontsComfortaa-Regular.ttf') format('truetype'), url('../fontsComfortaa-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Georgia Regular';
+	src: url('../fontsgeorgia.eot');
+	src: local('☺'), url('../fontsgeorgia.woff') format('woff'), url('../fontsgeorgia.ttf') format('truetype'), url('../fontsgeorgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Georgia Bold';
+	src: url('../fontsgeorgiab.eot');
+	src: local('☺'), url('../fontsgeorgiab.woff') format('woff'), url('../fontsgeorgiab.ttf') format('truetype'), url('../fontsgeorgiab.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lumberjack Inline Rough';
+	src: url('../fontsLumberjack Inline Rough.eot');
+	src: local('☺'), url('../fontsLumberjack Inline Rough.woff') format('woff'), url('../fontsLumberjack Inline Rough.ttf') format('truetype'), url('../fontsLumberjack Inline Rough.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lumberjack Rough';
+	src: url('../fontsLumberjack Rough.eot');
+	src: local('☺'), url('../fontsLumberjack Rough.woff') format('woff'), url('../fontsLumberjack Rough.ttf') format('truetype'), url('../fontsLumberjack Rough.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto Condensed Regular';
+	src: url('../fontsRobotoCondensed-Regular.eot');
+	src: local('☺'), url('../fontsRobotoCondensed-Regular.woff') format('woff'), url('../fontsRobotoCondensed-Regular.ttf') format('truetype'), url('../fontsRobotoCondensed-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik Regular';
+	src: url('../fonts/Rubik-Regular.eot');
+	src: local('☺'), url('fonts/Rubik-Regular.woff') format('woff'), url('fonts/Rubik-Regular.ttf') format('truetype'), url('fonts/Rubik-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  height: 100%;
+  min-width: 1290px;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.wrapper  {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+
+/*.........................HEADER.........................*/
+
+.header {
+    background-color: #09090A;
+    padding: 10px 0px;
+}
+
+.header__container {
+    max-width: 791px;
+    margin: 0 auto;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list li {
+    margin-right: 3%;
+}
+
+.nav__list :nth-child(2) {
+    margin-right: 0px;
+}
+
+.nav__list:last-child  {
+    margin-right: 0px;
+}
+
+.nav__list a {
+    font-family: Lumberjack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.nav__list a::before {
+    content: '';
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #D6258F;
+    transition: 0.2s;
+}
+
+.nav__list a:hover::before {
+    content: '';
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #D6258F;;
+}
+
+.logo {
+    padding: 0px 60px;
+}
+
+
+/* .......................BAR................................ */
+
+.bar {
+    background: url(/img/california\ background.png) 0 0/100% 100% no-repeat;
+    padding: 300px 0px;
+}
+
+.bar__body {
+    max-width: 500px;
+}
+
+.bar__title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 76px;
+    color: #D6258F;
+    margin-bottom: 60px;
+    text-shadow: 
+    1px 0 1px #FFFFFF, 
+    0 1px 1px #FFFFFF, 
+    -1px 0 1px #FFFFFF, 
+    0 -1px 1px #FFFFFF,
+    2px 0 2px #FB37FF, 
+    0 2px 2px #FB37FF, 
+    -2px 0 2px #FB37FF, 
+    0 -2px 2px #FB37FF,
+    0px 17.7708px 23.1021px #990099, 
+    0px 11.551px 8.88542px rgba(77, 0, 66, 0.7),
+    3px 0 3px #FF26C2, 
+    0 3px 3px #FF26C2, 
+    -3px 0 3px #FF26C2, 
+    0 -3px 3px #FF26C2,
+    4px 0 4px #F32E7C, 
+    0 4px 4px #F32E7C, 
+    -4px 0 4px #F32E7C, 
+    0 -4px 4px #F32E7C;
+}
+
+.bar__text {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 56px;
+    color: #ffffff;
+    text-shadow: 
+    2px 2px 10px #FFFFFF,
+    4px 4px 10px #fd02be;
+}
+
+/* ........................CLOSE................................ */
+
+.close {
+    background: #080808;
+    padding: 140px 0px 139px 0px;
+}
+
+.close__title {
+    margin-bottom: 60px;
+    
+}
+.title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 76px;
+    color: #D6258F;
+    text-align: center;
+    text-shadow: 
+    1px 0 1px #FFFFFF, 
+    0 1px 1px #FFFFFF, 
+    -1px 0 1px #FFFFFF, 
+    0 -1px 1px #FFFFFF,
+    2px 0 2px #FB37FF, 
+    0 2px 2px #FB37FF, 
+    -2px 0 2px #FB37FF, 
+    0 -2px 2px #FB37FF,
+    0px 17.7708px 23.1021px #990099, 
+    0px 11.551px 8.88542px rgba(77, 0, 66, 0.7),
+    3px 0 3px #FF26C2, 
+    0 3px 3px #FF26C2, 
+    -3px 0 3px #FF26C2, 
+    0 -3px 3px #FF26C2,
+    4px 0 4px #F32E7C, 
+    0 4px 4px #F32E7C, 
+    -4px 0 4px #F32E7C, 
+    0 -4px 4px #F32E7C;
+}
+
+.close__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.close__arrow {
+    position: absolute;
+    margin-left: -23%;
+}
+
+.item__body {
+    padding: 20px 5px 27px 15px;
+    background: #0F1F2F;
+    border-radius: 0px 0px 20px 20px;
+    max-width: 410px;
+}
+
+.item-title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #D6258F;
+    margin-bottom: 20px;   
+}
+
+.item-date {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: right;
+    color: #243D55;
+    margin-bottom: 21px;
+}
+
+.item-text {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+/* .......................NEW................................ */
+
+.new {
+    background-color: #020F1C;
+    padding: 42px 0px 146px 0px;
+}
+
+.new__title {
+    margin-bottom: 133px;
+}
+
+.new__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    min-width: 716px;
+    position: relative;
+}
+
+.item__list-image {
+    position: absolute;
+    left: 197px;
+}
+
+.item__main-title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #D6258F;
+    margin-bottom: 20px;
+    max-width: 169px;
+}
+
+.item__main-description {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    max-width: 300px;
+}
+
+.item__price {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #D6258F;
+    margin-top: -50px;
+}
+
+.new__image {
+    display: flex;
+    flex: 0 1 500px;
+    margin-top: -130px;
+}
+
+.new__image img {
+    max-width: 100%;
+}
+
+.new__button {
+    border: 2px solid #D6258F;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.new__button a {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 20px 0px;
+    display: block;
+    text-align: center;
+}
+
+.new__button :hover {
+    border: 1px solid #FFFFFF;
+    box-shadow: 
+    0px 0px 13px 5px rgba(173, 23, 176, 0.46), 
+    0px 0px 41px -8px rgba(196, 78, 149, 0.76), 
+    1px 2px 33px 8px #D6258F, 
+    0px 0px 12px 7px rgba(211, 144, 184, 0.44);
+    border-radius: 20px;
+}
+
+.new__alko {
+    text-align: center;
+}
+
+.new__alko a {
+    font-family: 'Roboto Condensed Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+/* .......................DISCO................................ */
+
+.disco {
+    background: url(/img/disco\ backgroound.png) 0 0/100% 100% no-repeat;
+    padding: 228px 0px;
+}
+
+.disco__title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 28px;
+    color: #D6258F;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.disco__text {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+/* .......................GALLERY................................ */
+
+.gallery {
+    background: url(/img/gallery\ background.png) 0 0/100% 100% no-repeat;
+    padding: 102px 0px 102px  0px;
+}
+
+.gallery__title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 76px;
+    color: #D6258F;
+    margin-bottom: 35px;
+    text-align: center;
+    text-shadow: 
+    1px 0 1px #FFFFFF, 
+    0 1px 1px #FFFFFF, 
+    -1px 0 1px #FFFFFF, 
+    0 -1px 1px #FFFFFF,
+    2px 0 2px #FB37FF, 
+    0 2px 2px #FB37FF, 
+    -2px 0 2px #FB37FF, 
+    0 -2px 2px #FB37FF,
+    0px 17.7708px 23.1021px #990099, 
+    0px 11.551px 8.88542px rgba(77, 0, 66, 0.7),
+    3px 0 3px #FF26C2, 
+    0 3px 3px #FF26C2, 
+    -3px 0 3px #FF26C2, 
+    0 -3px 3px #FF26C2,
+    4px 0 4px #F32E7C, 
+    0 4px 4px #F32E7C, 
+    -4px 0 4px #F32E7C, 
+    0 -4px 4px #F32E7C;
+}
+
+.gallery__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.gallery__column {
+    padding: 0px 15px;
+    margin-bottom: 40px;
+}
+
+.gallery__item {
+    transition: 0.2s;
+}
+
+.gallery__item:hover {
+    transform: scale(1.3, 1.3);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+.blur__none {
+    filter: blur(0px);
+}
+
+
+
+/* .......................FOOTER................................ */
+
+.footer {
+    background-color: #020F1C;
+    padding: 50px 0px;
+}
+
+.footer__title {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    color: #D6258F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer__body {
+    margin-bottom: 40px;
+}
+
+.footer__adress {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.footer__number {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.footer__text {
+    font-family: 'Lumberjack Rough';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer__image {
+    height: 2px;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 
+    0px 4px 4px rgba(0, 0, 0, 0.25), 
+    0px 1px 6px 6px #E1078B;
+    margin-bottom: 40px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__vk {
+    margin-right: 43px;
+}
+
+.social__vk {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 12px 5px #C30779;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__vk:hover {
+    box-shadow: 0px 0px 12px 5px rgb(242, 204, 247);
+}
+
+.social__insta {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 12px 5px #C30779;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__insta:hover {
+    box-shadow: 0px 0px 12px 5px #ffff;
+}
+
+
+
+
+
